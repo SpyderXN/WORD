@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://chniun4dhbn6k"]
+[gd_scene load_steps=7 format=3 uid="uid://chniun4dhbn6k"]
 
 [ext_resource type="Script" uid="uid://c00l7evpwit3n" path="res://MAIN/main.gd" id="1_ivjhr"]
 [ext_resource type="PackedScene" uid="uid://bqpfly4r4mmi0" path="res://SLOTS/slots.tscn" id="2_2t73g"]
 [ext_resource type="PackedScene" uid="uid://bk6fbbc31lxr6" path="res://KEYBUTTON/key_button.tscn" id="3_n7gkg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ivjhr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2t73g"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_n7gkg"]
 
 [node name="Main" type="Node2D" node_paths=PackedStringArray("slots")]
 script = ExtResource("1_ivjhr")
@@ -35,23 +41,150 @@ layout_mode = 2
 [node name="Slots4" parent="UI/HBoxContainer" instance=ExtResource("2_2t73g")]
 layout_mode = 2
 
-[node name="KeyButton" parent="UI" instance=ExtResource("3_n7gkg")]
-offset_left = 40.0
-offset_top = 11.0
-offset_right = 90.0
-offset_bottom = 61.0
+[node name="Hint" type="Label" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -306.0
+offset_bottom = 190.0
+grow_horizontal = 0
+label_settings = SubResource("LabelSettings_ivjhr")
+
+[node name="FinalAnswer" type="Label" parent="UI"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -165.0
+offset_right = 165.0
+offset_bottom = 85.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_2t73g")
+
+[node name="Tries" type="Label" parent="UI"]
+offset_right = 182.0
+offset_bottom = 191.0
+label_settings = SubResource("LabelSettings_n7gkg")
+
+[node name="WordsSet1" type="GridContainer" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -519.0
+offset_top = -29.0
+offset_right = 541.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 30
+columns = 9
+
+[node name="a" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
 text = "A"
 
-[node name="KeyButton2" parent="UI" instance=ExtResource("3_n7gkg")]
-offset_left = -31.0
-offset_top = 11.0
-offset_right = 19.0
-offset_bottom = 61.0
+[node name="b" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
 text = "B"
 
-[node name="KeyButton3" parent="UI" instance=ExtResource("3_n7gkg")]
-offset_left = -104.0
-offset_top = 11.0
-offset_right = -54.0
-offset_bottom = 61.0
+[node name="c" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
 text = "C"
+
+[node name="d" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "D"
+
+[node name="e" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "E"
+
+[node name="f" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "F"
+
+[node name="g" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "G"
+
+[node name="h" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "H"
+
+[node name="i" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "I"
+
+[node name="j" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "J"
+
+[node name="k" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "K"
+
+[node name="l" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "L"
+
+[node name="m" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "M"
+
+[node name="n" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "N"
+
+[node name="o" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "O"
+
+[node name="p" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "P"
+
+[node name="q" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "Q"
+
+[node name="r" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "R"
+
+[node name="s" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "S"
+
+[node name="t" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "T"
+
+[node name="u" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "U"
+
+[node name="v" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "V"
+
+[node name="w" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "W"
+
+[node name="x" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "X"
+
+[node name="y" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "Y"
+
+[node name="z" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "Z"
+
+[node name="Enter" parent="UI/WordsSet1" instance=ExtResource("3_n7gkg")]
+layout_mode = 2
+text = "ENTER"
