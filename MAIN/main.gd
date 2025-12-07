@@ -16,6 +16,10 @@ func _ready() -> void:
 			child.letter_pressed.connect(_on_key_pressed)
 	start_level()
 
+func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("Exit"):
+		get_tree().change_scene_to_file("res://MENU/menu.tscn")
+
 func start_level():
 	GameManager.load_current_level()
 	hint.text = "HINT: " + GameManager.get_current_hint()
@@ -65,8 +69,9 @@ func clear_slot_text_only():
 
 func _on_key_pressed(letter):
 	if letter == "BACK":
-		#delete_letter()
-		print("BACK")
+		if current_word.length() > 0:
+			current_word = current_word.substr(0, current_word.length() - 1)
+			update_slots()
 	elif letter == "ENTER":
 		if current_word.length() == WORD_LENGTH:
 			submit_guess()

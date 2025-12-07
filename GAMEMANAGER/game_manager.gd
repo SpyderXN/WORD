@@ -2,7 +2,7 @@ extends Node2D
 
 # --- DATA ---
 var levels = [
-	{"word": "GAME", "hint": "You are making one right now"},
+	{"word": "GAME", "hint": "You are playing one right now"},
 	{"word": "CODE", "hint": "Written instructions for computers"},
 	{"word": "TREE", "hint": "Has leaves and a trunk"},
 	{"word": "LION", "hint": "King of the jungle"},

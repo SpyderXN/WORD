@@ -1,0 +1,97 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1vramv42iids"]
+
+[ext_resource type="Script" uid="uid://5b0ayyovrayg" path="res://TUTORIAL/tutorial.gd" id="1_f1rih"]
+[ext_resource type="PackedScene" uid="uid://bqpfly4r4mmi0" path="res://SLOTS/slots.tscn" id="1_nenhj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f1rih"]
+font_size = 100
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_f1rih")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = -326.0
+offset_right = -21.0
+offset_bottom = -286.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slots" parent="CanvasLayer/HBoxContainer" instance=ExtResource("1_nenhj")]
+self_modulate = Color(18.059078, 18.816904, 0, 1)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer/Slots"]
+layout_mode = 2
+text = "E"
+label_settings = SubResource("LabelSettings_f1rih")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slots2" parent="CanvasLayer/HBoxContainer" instance=ExtResource("1_nenhj")]
+self_modulate = Color(0, 18.815704, 0, 1)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer/Slots2"]
+layout_mode = 2
+text = "E"
+label_settings = SubResource("LabelSettings_f1rih")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slots3" parent="CanvasLayer/HBoxContainer" instance=ExtResource("1_nenhj")]
+self_modulate = Color(0.28118682, 0.28118688, 0.28118682, 1)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/HBoxContainer/Slots3"]
+layout_mode = 2
+text = "E"
+label_settings = SubResource("LabelSettings_f1rih")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Slots4" parent="CanvasLayer/HBoxContainer" instance=ExtResource("1_nenhj")]
+self_modulate = Color(14.396581, 0, 0, 1)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -920.0
+offset_top = -172.0
+offset_right = 942.0
+offset_bottom = 422.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 50
+theme_override_font_sizes/bold_font_size = 50
+text = "RULES:
+The game is simple and easy. Guess the word from the given hint. You get only 5 chance.
+
+Yellow colored box means the letter is right but not in the correct place.
+
+Green means the letter is right and is in the correct place.
+
+Gray means the letter is wrong.
+
+Red means there is no letter."
+
+[node name="Menu" type="Button" parent="CanvasLayer"]
+offset_left = 97.0
+offset_top = 85.0
+offset_right = 335.0
+offset_bottom = 185.0
+theme_override_font_sizes/font_size = 50
+text = "Menu"
+
+[connection signal="pressed" from="CanvasLayer/Menu" to="." method="_on_menu_pressed"]

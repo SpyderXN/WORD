@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://crts06sbm4wwx" path="res://SLOTS/slots.gd" id="1_2sr7x"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_uamyw"]
-font_size = 40
+font_size = 60
 
 [node name="Slots" type="PanelContainer"]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(150, 150)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5

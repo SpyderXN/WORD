@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp8utedb1y72t"]
+
+[ext_resource type="Script" uid="uid://uhylttrxh2fx" path="res://MENU/menu.gd" id="1_cfd6y"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pn04r"]
+font_size = 150
+
+[node name="Menu" type="CanvasLayer"]
+script = ExtResource("1_cfd6y")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -463.0
+offset_top = 155.0
+offset_right = 498.0
+offset_bottom = 390.5
+grow_horizontal = 2
+text = "Working Title"
+label_settings = SubResource("LabelSettings_pn04r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Play" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -40.0
+offset_right = 192.0
+offset_bottom = 63.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Play"
+
+[node name="Exit" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = 104.0
+offset_right = 192.0
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+
+[node name="Tutorial" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = 248.0
+offset_right = 192.0
+offset_bottom = 351.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Tutorial"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Tutorial" to="." method="_on_tutorial_pressed"]
